@@ -1,18 +1,17 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-// Importing for console logs
-import "hardhat/console.sol";
+contract Counter{
+    // Initializing the variable
+    uint256 count = 0;
 
-contract counter{
-    uint public count = 0;
-
-    function getCount() public view returns (uint){
-        console.log("Count: ",count);
+    // Getting the count
+    function getCount() public view returns(uint) {
         return count;
     }
 
-    function incrementCount() public{
-        count++;
+    // Incrementing the counter
+    function increment() public{
+        count = count + 1;
     }
 }
